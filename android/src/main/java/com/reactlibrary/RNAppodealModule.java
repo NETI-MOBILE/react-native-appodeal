@@ -2,6 +2,8 @@ package com.reactlibrary;
 
 import android.widget.Toast;
 
+import com.appodeal.ads.NativeAd;
+import com.appodeal.ads.NativeCallbacks;
 import com.explorestack.consent.Consent;
 import com.explorestack.consent.ConsentForm;
 import com.explorestack.consent.ConsentFormListener;

@@ -14,28 +14,18 @@ interface AppodealBannerProps {
 
 type AdSize = 'phone' | 'tablet' | 'mrec';
 
-interface NativeAppodealBannerProps {
-	adSize: AdSize,
-	placement?: string,
-	onAdLoaded?: Function,
-	onAdFailedToLoad?: Function,
-	onAdClicked?: Function,
-	onAdExpired?: Function,
-	style?: StyleProp<ViewStyle>,
-}
-
-const RNAppodealBannerView = requireNativeComponent<NativeAppodealBannerProps>('RNAppodealBannerView');
+const RNAppodealBannerView = requireNativeComponent('RNAppodealBannerView');
 
 const AppodealBanner = (props: AppodealBannerProps) => {
-	const { 
-		adSize, 
-		placement, 
-		onAdLoaded, 
-		onAdFailedToLoad, 
-		onAdClicked, 
-		onAdExpired, 
-		style, 
-		...restProps 
+	const {
+		adSize,
+		placement,
+		onAdLoaded,
+		onAdFailedToLoad,
+		onAdClicked,
+		onAdExpired,
+		style,
+		...restProps
 	} = props
 
 	const height: Record<AdSize, number> = {
@@ -45,7 +35,7 @@ const AppodealBanner = (props: AppodealBannerProps) => {
 	};
 
 	return (
-		<RNAppodealBannerView 
+		<RNAppodealBannerView
 			adSize={adSize}
 			onAdLoaded={onAdLoaded}
 			onAdFailedToLoad={onAdFailedToLoad}
