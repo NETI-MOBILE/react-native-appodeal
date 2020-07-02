@@ -17,13 +17,33 @@ import java.util.Map;
 
 
 public class RNAppodealNativeManager extends SimpleViewManager<RCTAppodealNativeView> {
-    @ReactProp(name = "adSize")
-    public void setSize(RCTAppodealBannerView view, String size) { view.setAdSize(size); }
+    public static final String PROP_TEXT_COLOR = "textColor";
+    public static final String PROP_MORE_TEXT_COLOR = "textColorMore";
+    private RCTAppodealNativeView nativeAdView;
+
+    @ReactProp(name = PROP_TEXT_COLOR)
+    public void setTextColor(RCTAppodealNativeView view, String color) {
+        if (color != null) {
+            nativeAdView.setTextColor(color);
+        } else {
+            nativeAdView.setTextColor("#FFFFFF");
+        }
+    }
+
+    @ReactProp(name = PROP_MORE_TEXT_COLOR)
+    public void setMoreTextColor(RCTAppodealNativeView view, String color) {
+        if (color != null) {
+            nativeAdView.setMoreTextColor(color);
+        } else {
+            nativeAdView.setMoreTextColor("#009688");
+        }
+    }
 
     @Override
     public RCTAppodealNativeView createViewInstance(ThemedReactContext context) {
         RCTAppodealNativeView nativeView = new RCTAppodealNativeView(context);
         Appodeal.setNativeCallbacks(nativeView);
+        nativeAdView = nativeView;
         return nativeView;
     }
 

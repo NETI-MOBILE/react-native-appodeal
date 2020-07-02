@@ -3,10 +3,11 @@
     android:id="@+id/native_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:visibility="gone">
-    <com.appodeal.ads.native_ad.views.NativeAdViewAppWall
-        android:id="@+id/native_ad_view_app_wall"
-        android:layout_width="wrap_content"
+    android:visibility="visible">
+    <com.appodeal.ads.native_ad.views.NativeAdViewContentStream
+        android:id="@+id/native_ad_view_news_feed"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp">
+    </com.appodeal.ads.native_ad.views.NativeAdViewContentStream>
 </com.appodeal.ads.NativeAdView>

@@ -106,7 +106,6 @@ public class RCTAppodealBannerView extends ReactViewGroup implements BannerCallb
 
         int pxW = r.getDisplayMetrics().widthPixels;
         int pxH = dp2px(height, dm);
-
         adView.setVisibility(VISIBLE);
         adView.setLayoutParams(new BannerView.LayoutParams(pxW, pxH));
         addView(adView);
