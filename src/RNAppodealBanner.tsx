@@ -14,7 +14,7 @@ interface AppodealBannerProps {
 
 type AdSize = 'phone' | 'tablet' | 'mrec';
 
-const RNAppodealBannerView = requireNativeComponent('RNAppodealBannerView');
+const RNAppodealBannerView = requireNativeComponent<any>('RNAppodealBannerView');
 
 const AppodealBanner = (props: AppodealBannerProps) => {
 	const {

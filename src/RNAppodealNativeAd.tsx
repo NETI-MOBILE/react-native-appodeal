@@ -8,7 +8,7 @@ interface AppodealNativeAdProps {
 	style?: StyleProp<ViewStyle>
 }
 
-const RNAppodealNativeView = requireNativeComponent('RNAppodealNativeView');
+const RNAppodealNativeView = requireNativeComponent<any>('RNAppodealNativeView');
 
 const AppodealNativeAd = (props: AppodealNativeAdProps) => {
 	const {
@@ -20,7 +20,9 @@ const AppodealNativeAd = (props: AppodealNativeAdProps) => {
 
 	return (
 		<RNAppodealNativeView
-			style={[style, {height: 300}]}
+			textColor={textColor}
+			textColorMore={textColorMore}
+			style={[style]}
 			{...restProps}
 		/>
 	);
