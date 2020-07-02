@@ -49,7 +49,7 @@ public class RNAppodealNativeManager extends SimpleViewManager<RCTAppodealNative
 
     @Override
     public String getName() {
-        return "RCTAppodealNativeView";
+        return "RNAppodealNativeView";
     }
 }
 
