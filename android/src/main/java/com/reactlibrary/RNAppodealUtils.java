@@ -50,6 +50,9 @@ class RNAppodealUtils {
         if ((types & (1 << 8)) > 0) {
             result |= Appodeal.MREC;
         }
+        if ((types & (1 << 9)) > 0) {
+                    result |= Appodeal.NATIVE;
+                }
         return result;
     }
 

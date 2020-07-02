@@ -7,8 +7,9 @@ export interface AdTypeType {
   readonly BANNER_BOTTOM: number,
   readonly BANNER_TOP: number,
   readonly REWARDED_VIDEO: number,
-  readonly NON_SKIPPABLE_VIDEO: number
-  readonly MREC: number
+  readonly NON_SKIPPABLE_VIDEO: number,
+  readonly MREC: number,
+  readonly NATIVE: number
 }
 
 export const AppodealAdType: AdTypeType = {
@@ -19,7 +20,8 @@ export const AppodealAdType: AdTypeType = {
   BANNER_TOP: 1 << 4,
   REWARDED_VIDEO: 1 << 5,
   NON_SKIPPABLE_VIDEO: 1 << 6,
-  MREC: 1 << 8.
+  MREC: 1 << 8,
+  NATIVE: 1 << 9.
 }
 
 export enum AppodealLogLevel {

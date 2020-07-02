@@ -82,7 +82,7 @@ public class RNAppodealModule extends ReactContextBaseJavaModule implements Inte
 
     @ReactMethod
     public void initialize(String appKey, int adTypes, boolean consent) {
-        Appodeal.initialize(getCurrentActivity(), appKey, Appodeal.NATIVE, consent);
+        Appodeal.initialize(getCurrentActivity(), appKey, RNAppodealUtils.getAdTypesFormRNTypes(adTypes), consent);
     }
 
     @ReactMethod
