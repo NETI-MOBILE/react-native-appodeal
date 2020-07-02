@@ -1,8 +1,9 @@
 import { default as Appodeal } from './RNAppodeal';
 import { default as AppodealBanner } from './RNAppodealBanner';
-import { 
+import { default as AppodealNativeAd } from './RNAppodealNativeAd';
+import {
     AppodealAdType,
-    AppodealLogLevel, 
+    AppodealLogLevel,
     AppodealGender,
     AppodealConsentRegulation,
     AppodealConsentStatus
@@ -17,6 +18,7 @@ import * as AppodealNonSkippableEvent from './events/nonskippable';
 export {
     Appodeal,
     AppodealBanner,
+    AppodealNativeAd,
     AppodealAdType,
     AppodealLogLevel,
     AppodealGender,
